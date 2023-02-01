@@ -1,6 +1,9 @@
+import { config } from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { executeStudentCrudOperations } from './studentsCrud.js';
+
+config();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));

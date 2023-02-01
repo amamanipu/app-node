@@ -24,12 +24,6 @@ export async function connectToCluster(uri) {
 /**Create Student */
 
 export async function createStudentDocument(collection, user) {
-    const userDocument = {
-        name: 'John Smith',
-        birthdate: new Date(2000, 11, 20),
-        address: { street: 'Pike Lane', city: 'Los Angeles', state: 'CA' },
-    };
-
     await collection.insertOne(user);
 }
 
